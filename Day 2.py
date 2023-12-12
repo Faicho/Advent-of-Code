@@ -9,12 +9,11 @@ for line in file:
     valid = True
     id1, line = line.split(":")
     for sets in line.split(";"):
-        for balls in line.split(","):
+        for balls in sets.split(","):
             num, colour = balls.split()
             if int(num) > check.get(colour, 0):
                 valid = False
     if valid:
         game, id1 = id1.split()
-        ans += int(id1)
-print(ans)
-
+        ID_sum += int(id1)
+print(ID_sum)
