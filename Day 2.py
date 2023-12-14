@@ -1,4 +1,5 @@
 #example input
+#months = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
 #Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 #12 red cubes, 13 green cubes, and 14 blue cubes?
 file = open("inputday2.txt", "r")
