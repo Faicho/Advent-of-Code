@@ -16,6 +16,21 @@ for line in file:
                 valid = False
     if valid:
         game, id1 = id1.split()
-        ans += int(id1)
-print(ans)
+        ID_sum += int(id1)
+print(ID_sum)
+
+#part2
+power = 0
+file = open("inputday2.txt", "r")
+file = file.read()
+for line in file.split("\n"):
+    line = line.split(":")[1]
+    check2 = {"red" : 0, "green" : 0, "blue" : 0}
+    for sets in line.split("; "):
+        for balls in sets.split(", "):
+            num, colour = balls.split()
+            check2[colour] = max(int(num), check2[colour])
+    power += check2["red"] * check2["green"] * check2["blue"]
+
+print(power)
 
